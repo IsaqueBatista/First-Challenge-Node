@@ -8,14 +8,19 @@ AQUI ESTÁ A DESCRIÇÃO DO DESAFIO
 
 Crie uma aplicação que fará o cadastro dos pedidos de uma hamburgueria, e você deve utilizar Node e Express.
 
+
 ROTAS
 
 
 POST /order: A rota deve receber o pedido do cliente, o nome do cliente e o valor do pedido, essas informações devem ser passadas dentro do corpo(body) da requisição, e com essas informações você deve registrar o novo pedido dentro de um array no seguinte formato: 
 
-{ id: "ac3ebf68-e0ad-4c1d-9822-ff1b849589a8", 
+{ 
+  id: "ac3ebf68-e0ad-4c1d-9822-ff1b849589a8", 
   order: "X- Salada, 2 batatas grandes, 1 coca-cola", 
-  clientName:"José", price: 44.50, status:"Em preparação" }. 
+  clientName: "José", 
+  price: 44.50, 
+  status:"Em preparação" 
+} 
   
 Não se esqueça que o ID único deve ser gerado para cada pedido criado. Assim que o pedido é criado, você deve sempre colocar o status como "Em preparação".
 
@@ -53,6 +58,7 @@ Se eu chamar a rota POST /order repassando { order: "X- Salada, 2 batatas grande
     status:"Em preparação"
   }
 ];
+
 Se eu chamar a rota PATCH /order/ac3ebf68-e0ad-4c1d-9822-ff1b849589a8, o array deve ficar assim:
 
 [
